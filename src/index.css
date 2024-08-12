@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS DESIGN USING MOBILE-FIRST APPROACH */
+:root {
+  /* Typography */
+  --FF: 'Work Sans', sans-serif;
+  --FWH: 700;
+  --FWB: 400;
+  --FSB: 1rem;
+  --FSH: 2rem;
+
+  /* Colors */
+  --White: hsl(0, 0%, 100%);
+  --Light-Pink: hsl(275, 100%, 97%);
+  --Grayish-Purple: hsl(292, 16%, 49%);
+  --Dark-Purple: hsl(292, 42%, 14%);
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+  overflow: scroll;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-optical-sizing: auto;
+  font-size: var(--FSB);
+  font-family: var(--FF);
+  font-weight: var(--FSB);
+  color: var(--Dark-Purple);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Typography */
+.header-flex h1 {
+  font-size: var(--FSH);
+  font-weight: var(--FWH);
+  margin-top: 0.2em;
+}
+
+.faq-flex h4 {
+  font-weight: var(--FWH);
+}
+/* Content Styles */
+.container {
+  width: 85%;
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+.top {
+  padding: 13em;
+  background-image: url(./assets/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+}
+
+.bottom {
+  padding: 13em;
+  max-height: auto;
+  background-color: var(--Light-Pink);
+  position: relative;
+  width: 100%;
+}
+
+.card {
+  position: absolute;
+  top: 40%;
+  left: 42%;
+  transition: all 1s ease-out;
+  border-radius: 5px;
+  background-color: var(--White);
+  padding: 0.6em 1em;
+  width: 20%;
+  z-index: 1;
+}
+
+.header-flex {
+  display: flex;
+  gap: 15px;
+}
+
+.card ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.faq-flex {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-flex:active,
+.faq-flex:hover {
+  color: var(--Grayish-Purple);
+}
+
+.border-bottom {
+  border-bottom: 3px solid var(--Light-Pink);
+}
+.attribution {
+  font-size: 0.687rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--Grayish-Purple);
+}
+
+/* Desktop Styles */
+
+@media (min-width: 800px) {
+  .container {
+    max-width: 1440px;
+    width: 100%;
+  }
+
+  .card {
+    padding: 1em 2.5em;
+    width: 30%;
+  }
+
+  .top {
+    background-image: url(./assets/background-pattern-desktop.svg);
+  }
+}
