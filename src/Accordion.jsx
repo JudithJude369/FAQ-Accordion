@@ -1,3 +1,5 @@
+import mobileIcon from './assets/background-pattern-mobile.svg';
+import desktopIcon from './assets/background-pattern-desktop.svg';
 import starIcon from './assets/icon-star.svg';
 import AccordionList from './AccordionList';
 import { useState } from 'react';
@@ -33,25 +35,27 @@ const Accordion = () => {
   const [currOpen, setCurrOpen] = useState(null);
   return (
     <main>
-      <div className="top"></div>
-      <div className="bottom"></div>
-      <section className="card">
-        <div className="header-flex">
-          <img src={starIcon} alt="logo" />
-          <h1>FAQs</h1>
-        </div>
-        <ul>
-          {faq.map((faq, i) => (
-            <AccordionList
-              data={faq}
-              key={faq.id}
-              num={i}
-              currOpen={currOpen}
-              onOpen={setCurrOpen}
-            />
-          ))}
-        </ul>
-      </section>
+      <img src={mobileIcon} alt="mobile-pattern" className="mobile-bg" />
+      <img src={desktopIcon} alt="desktop-pattern" className="desktop-bg" />
+      <div className="card-wrapper">
+        <section className="card">
+          <div className="header-flex">
+            <img src={starIcon} alt="logo" />
+            <h1>FAQs</h1>
+          </div>
+          <ul>
+            {faq.map((faq, i) => (
+              <AccordionList
+                data={faq}
+                key={faq.id}
+                num={i}
+                currOpen={currOpen}
+                onOpen={setCurrOpen}
+              />
+            ))}
+          </ul>
+        </section>
+      </div>
     </main>
   );
 };
