@@ -60,6 +60,7 @@ body {
   font-family: var(--FF);
   font-weight: var(--FSB);
   color: var(--Dark-Purple);
+  background-color: var(--Light-Pink);
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -129,6 +130,7 @@ textarea:not([rows]) {
   width: 85%;
   max-width: 375px;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
 .hero {
@@ -194,7 +196,6 @@ textarea:not([rows]) {
   .container {
     max-width: 1440px;
     width: 100%;
-    min-height: 100vh;
   }
 
   .header-flex h1 {
