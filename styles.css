@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* CSS DESIGN USING MOBILE-FIRST APPROACH */
+:root {
+  /* Typography */
+  --FF: "Work Sans", sans-serif;
+  --FS: 0.8rem;
+  --FSH: 1.5rem;
+  /* Colors */
+  --white: hsl(0, 100%, 100%);
+  --Purple-100: hsl(275, 100%, 97%);
+  --Purple-600: hsl(292, 16%, 49%);
+  --Purple-950: hsl(292, 42%, 14%);
+  --darkorchid: hsl(280, 61%, 50%);
+  /* --purple: #645cff;
+  --grey-900: #0f172a;
+  --grey-50: #f8fafc; */
+}
+
+/* CSS RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+  overflow: scroll;
+  font-size: 100%;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  /* transition: background-color 3s ease-in-out; */
+  /* transition: color 3s ease-in-out; */
+  min-height: 100vh;
+  line-height: 1;
+  font-optical-sizing: auto;
+  font-family: var(--FF);
+  font-size: var(--FS);
+  background-color: var(--Purple-100);
+  color: var(--Purple-600);
+  font-weight: 400;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* content style */
+.bgImgMobile,
+.bgImgDesktop {
+  width: 100%;
+  margin-top: -2rem;
+  height: 30vh;
+}
+
+.bgImgDesktop {
+  display: none;
+}
+
+.img-container {
+  position: relative;
+}
+.container {
+  width: 88%;
+  max-width: 900px;
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 1rem;
+  position: absolute;
+  top: 15%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease-in-out all;
+}
+
+.starContainer {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.starContainer h1 {
+  color: var(--Purple-950);
+  font-weight: 700;
+  font-size: var(--FSH);
+}
+
+.starContainer img {
+  width: 30px;
+}
+
+.questionContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 0.8rem;
+}
+
+.questionContainer h2 {
+  color: var(--Purple-950);
+  font-weight: 700;
+}
+
+.questionContainer h2:hover {
+  color: var(--darkorchid);
+}
+
+.answers {
+  display: none;
+  max-height: 15rem;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.open {
+  display: block;
+}
+
+.answerContainer div {
+  margin: 1rem 0;
+  border-bottom: 2px solid var(--Purple-600);
+  opacity: 10%;
+}
+
+/* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease-in-out all; */
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .bgImgMobile {
+    display: none;
+  }
+
+  .bgImgDesktop {
+    display: block;
+  }
+
+  .container {
+    width: 40%;
+  }
+
+  .questionContainer h2 {
+    font-size: 1rem;
+  }
+}
