@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/JudithJude369/FAQ-Accordion)
-- Live Site URL: [Add live site URL here](https://judithjude369.github.io/FAQ-Accordion/)
+-  [Solution URL](https://github.com/JudithJude369/FAQ-Accordion)
+-  [Live Site URL](https://judithjude369.github.io/FAQ-Accordion/)
 
 ## My process
 
